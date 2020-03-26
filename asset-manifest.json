@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/guitar-diagrams/static/css/main.87128b37.chunk.css",
+    "main.js": "/guitar-diagrams/static/js/main.9b1ef200.chunk.js",
+    "main.js.map": "/guitar-diagrams/static/js/main.9b1ef200.chunk.js.map",
+    "runtime-main.js": "/guitar-diagrams/static/js/runtime-main.6cc430bd.js",
+    "runtime-main.js.map": "/guitar-diagrams/static/js/runtime-main.6cc430bd.js.map",
+    "static/js/2.12b9edee.chunk.js": "/guitar-diagrams/static/js/2.12b9edee.chunk.js",
+    "static/js/2.12b9edee.chunk.js.map": "/guitar-diagrams/static/js/2.12b9edee.chunk.js.map",
+    "index.html": "/guitar-diagrams/index.html",
+    "precache-manifest.f15e366dfb7ecca15fa974966e74502d.js": "/guitar-diagrams/precache-manifest.f15e366dfb7ecca15fa974966e74502d.js",
+    "service-worker.js": "/guitar-diagrams/service-worker.js",
+    "static/css/main.87128b37.chunk.css.map": "/guitar-diagrams/static/css/main.87128b37.chunk.css.map",
+    "static/js/2.12b9edee.chunk.js.LICENSE.txt": "/guitar-diagrams/static/js/2.12b9edee.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6cc430bd.js",
+    "static/js/2.12b9edee.chunk.js",
+    "static/css/main.87128b37.chunk.css",
+    "static/js/main.9b1ef200.chunk.js"
+  ]
+}
