@@ -1,33 +1,58 @@
 import React from 'react';
 import './App.css';
 
-import { GuitarChordDiagram } from '@musicenviro/ui-elements'
+import { GuitarChordDiagram, IFingeredNote } from '@musicenviro/ui-elements'
+import { calculateAllChords } from './calculate/calculateAllChords';
+
+
+const allChords = calculateAllChords()
+console.log(allChords[0].fingeredNotes)
 
 function App() {
-	const ref = React.createRef<HTMLCanvasElement>()
+	const [fingeredNotes, setFingeredNotes] = React.useState<IFingeredNote[]>(allChords[0].fingeredNotes)
+	const [column, setColumn] = React.useState<number>(0)
+	const [row, setRow] = React.useState<number>(0)
+
+	const index = (row: number, column: number) => row * 12 + column
 
 	React.useEffect(() => {
-		const canvas = ref.current
-		if (!canvas) return
-		const ctx = canvas.getContext('2d')
-		if (!ctx) return
+		setFingeredNotes(allChords[column].fingeredNotes)
+		window.addEventListener("keydown", (e: KeyboardEvent) => {
+			switch (e.key) {
+				case 'ArrowLeft':
+					setColumn(prev => Math.max(0, prev - 1))
+					break;
 
-		ctx.fillRect(0, 0, canvas.width, canvas.height)
-	})
+				case 'ArrowRight':
+					setColumn(prev => Math.min(11, prev + 1))
+					break;
+
+				case 'ArrowUp':
+					setRow(prev => Math.max(0, prev - 1))
+					break;
+
+				case 'ArrowDown':
+					setRow(prev => Math.min(34, prev + 1))
+					break;
+			}
+		})
+	}, [])
 
 	return (
-		<div className="App">
-			<div style={{height: 300, width: 300}}>
-				<GuitarChordDiagram /> 
+		<div>
+			<header>GUITAR CHORD DIAGRAM BROWSER</header>
+			<div id="main">
+				<div className="label" id="chordType">{allChords[index(row, column)].type} 7th</div>
+				<div className="label" id="strings">{allChords[index(row, column)].strings}</div>
+				<div className="label" id="column">{column}</div>
+
+				<div id="diagram-container">
+					<GuitarChordDiagram fingeredNotes={allChords[index(row, column)].fingeredNotes} />
+				</div>
 			</div>
-
-
-
-			{/* <div>
-        <canvas height={'500'} ref={ref}></canvas>
-      </div> */}
 		</div>
 	);
 }
+
 
 export default App;
