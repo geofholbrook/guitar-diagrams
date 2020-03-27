@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import { GuitarChordDiagram, IFingeredNote } from '@musicenviro/ui-elements'
+import { GuitarChordDiagram } from '@musicenviro/ui-elements'
 import { calculateAllChords } from './calculate/calculateAllChords';
 
 
@@ -9,14 +9,12 @@ const allChords = calculateAllChords()
 console.log(allChords[0].fingeredNotes)
 
 function App() {
-	const [fingeredNotes, setFingeredNotes] = React.useState<IFingeredNote[]>(allChords[0].fingeredNotes)
 	const [column, setColumn] = React.useState<number>(0)
 	const [row, setRow] = React.useState<number>(0)
 
 	const index = (row: number, column: number) => row * 12 + column
 
 	React.useEffect(() => {
-		setFingeredNotes(allChords[column].fingeredNotes)
 		window.addEventListener("keydown", (e: KeyboardEvent) => {
 			switch (e.key) {
 				case 'ArrowLeft':
