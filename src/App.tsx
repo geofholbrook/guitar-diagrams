@@ -18,11 +18,11 @@ function App() {
 		window.addEventListener("keydown", (e: KeyboardEvent) => {
 			switch (e.key) {
 				case 'ArrowLeft':
-					setColumn(prev => Math.max(0, prev - 1))
+					setColumn(prev => (prev + 11) % 12) // like -1
 					break;
 
 				case 'ArrowRight':
-					setColumn(prev => Math.min(11, prev + 1))
+					setColumn(prev => (prev + 1) % 12)
 					break;
 
 				case 'ArrowUp':
