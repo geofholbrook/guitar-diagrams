@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d9a8ad521cc77efe86e84d0544138be5",
+    "revision": "a433822879e416b3271833b756df027e",
     "url": "/guitar-diagrams/index.html"
   },
   {
-    "revision": "926630d8ef5a3dd6520b",
+    "revision": "1d38cc2d8312c567e4aa",
     "url": "/guitar-diagrams/static/css/main.87128b37.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/guitar-diagrams/static/js/2.df08e723.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "926630d8ef5a3dd6520b",
-    "url": "/guitar-diagrams/static/js/main.c2ab4b7f.chunk.js"
+    "revision": "1d38cc2d8312c567e4aa",
+    "url": "/guitar-diagrams/static/js/main.56976304.chunk.js"
   },
   {
     "revision": "95f13d994587ac2eb4a2",
